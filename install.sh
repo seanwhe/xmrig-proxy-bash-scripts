@@ -28,21 +28,20 @@ else
         echo "$USER     ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/README
 fi
 
-# Update system
-. maintenance.sh
-sleep 5
-
-# Install dependencies
-. depends.sh
-sleep 5
-
-
 # Load functions
 . functions.sh
 sleep 5
 
 # Get settings 
 . settings.sh
+sleep 5
+
+# Update system
+. maintenance.sh
+sleep 5
+
+# Install dependencies
+. depends.sh
 sleep 5
 
 # User input
