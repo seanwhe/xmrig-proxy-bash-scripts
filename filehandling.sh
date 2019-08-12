@@ -1,27 +1,5 @@
 #!/bin/bash
 
-_SWAPFILE_NAME="swapfile"
-_SWAPFILE_SIZE="4G"
-
-_SWAPPINESS="$(sysctl vm.swappiness | cut -d' ' -f 3)"
-_SWAPPINESS_TARGET="10"
-
-_VFS_CACHE_PRESSURE="$(sysctl vm.vfs_cache_pressure  | cut -d' ' -f 3)"
-_VFS_CACHE_PRESSURE_TARGET="50"
-
-_FILE_MAX="$(cat /proc/sys/fs/file-max)"
-_FILE_MAX_TARGET="800000"
-
-_ULIMIT="$(ulimit -n)"
-_ULIMIT_TARGET="1048576"
-
-_ULIMIT_HARD="$(ulimit -Hn)"
-_ULIMIT_HARD_TARGET="$_ULIMIT_TARGET"
-
-_ULIMIT_SOFT=$(ulimit -Sn)
-_ULIMIT_SOFT_TARGET="$_ULIMIT_TARGET"
-
-
 echo -e "${_GREEN}FILE HANDLING STARTED${_RESET}"
 
 # Deal with swappiness first
