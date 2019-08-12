@@ -37,7 +37,8 @@ Some knowledge of:
    1. Algorithm to use
    1. Pool server URL
    1. Receive wallet address
-   1. Pool password 
+   1. Pool password
+   1. HTTP Access Token 
 1. After install is complete. Attach to the screen session created during the installation.
    `screen -r`
 
