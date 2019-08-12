@@ -50,7 +50,7 @@ fi
 if [ "$_FILE_MAX" -lt "$_FILE_MAX_TARGET" ]; then
 
 	echo "fs.file-max: $_FILE_MAX incorrect. Fixing That!!!"
-        sysctl -w fs.file-max=$_FILE_MAX_TARGET
+        sudo sysctl -w fs.file-max=$_FILE_MAX_TARGET
 	echo "fs.file-max=$_FILE_MAX_TARGET" | sudo tee -a /etc/sysctl.conf
 	sudo sysctl -p
 
