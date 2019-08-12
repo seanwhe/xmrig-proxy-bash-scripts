@@ -28,6 +28,15 @@ else
         echo "$USER     ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers.d/README
 fi
 
+# Update system
+. maintenance.sh
+sleep 5
+
+# Install dependencies
+. depends.sh
+sleep 5
+
+
 # Load functions
 . functions.sh
 sleep 5
@@ -42,14 +51,6 @@ sleep 5
 
 # Stop running instance
 . stop.sh
-
-# Update system
-. maintenance.sh
-sleep 5
-
-# Install dependencies
-. depends.sh
-sleep 5
 
 # Configure file handling
 . filehandling.sh
