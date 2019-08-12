@@ -26,14 +26,14 @@ _API_ID="null"
 _API_WORKER_ID="$HOSTNAME"
 
 _HTTP_ENABLED="true"
-_HTTP_HOST=$(hostname --all-ip-addresses | awk '{print $1}')
+_HTTP_HOST="$(hostname --all-ip-addresses | awk '{print $1}')"
 _HTTP_PORT="8080"
 _HTTP_ACCESS_TOKEN="null"
 _HTTP_RESTRICTED="false"
 
 _BACKGROUND="false"
 
-_BIND_HOST=$(hostname --all-ip-addresses | awk '{print $1}')
+_BIND_HOST="$(hostname --all-ip-addresses | awk '{print $1}')"
 _BIND_PORT="3333"
 _BIND_TLS="false"
 
