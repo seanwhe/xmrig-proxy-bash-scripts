@@ -10,7 +10,7 @@ if [ -e /$_SWAPFILE_NAME ]; then
 
 else
 	echo "The file /$_SWAPFILE_NAME does not exist. Fixing That!!!"
-	sudo allocate -l $_SWAPFILE_SIZE /$_SWAPFILE_NAME
+	sudo fallocate -l $_SWAPFILE_SIZE /$_SWAPFILE_NAME
 	sudo chmod 600 /$_SWAPFILE_NAME
 	sudo mkswap /$_SWAPFILE_NAME
 	sudo swapon /$_SWAPFILE_NAME
