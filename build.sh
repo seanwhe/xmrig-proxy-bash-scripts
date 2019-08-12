@@ -43,7 +43,7 @@ else
 fi
 
 # Copy binary to directory in env path
-sudo cp $_XMRIG_BUILD_LOCATION/xmrig $_XMRIG_TARGET_LOCATION
+sudo cp $_XMRIG_BUILD_LOCATION/xmrig-proxy $_XMRIG_TARGET_LOCATION
 
 cd $_WORK_DIR
 
