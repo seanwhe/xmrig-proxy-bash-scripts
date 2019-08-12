@@ -26,10 +26,11 @@ function show_mysettings () {
         if [ -f $_WORK_DIR/$_MYSETTINGS_FILE ]; then
 		load_mysettings
 		echo "${_CYAN}Settings from mysettings.sh:${_RESET}"
-                
+		echo "${_GREEN}Algorithm :${_RESET}: $_POOLS_ALGO"                
 		echo "${_GREEN}Pool URL:${_RESET}: $_POOLS_URL"
                 echo "${_GREEN}Recieve Wallet:${_RESET}: $_POOLS_USER"
 		echo "${_GREEN}Pool Password:${_RESET}: $_POOLS_PASS"
+		echo "${_GREEN}HTTP Acccess Token:${_RESET}: $_HTTP_ACCESS_TOKEN"
 
         fi
 }

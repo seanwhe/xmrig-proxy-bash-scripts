@@ -53,7 +53,7 @@ else
 		echo "_POOLS_PASS=\"$_POOLS_PASS\"" >> $_MYSETTINGS_FILE_LOCATION
 
 		echo "Current HTTP Access Token: $_HTTP_ACCESS_TOKEN"
-                read -p "Enter new HTTP Access Token: " __HTTP_ACCESS_TOKEN
+                read -p "Enter new HTTP Access Token: " _HTTP_ACCESS_TOKEN
                 echo "_HTTP_ACCESS_TOKEN=\"$_HTTP_ACCESS_TOKEN\"" >> $_MYSETTINGS_FILE_LOCATION
 
 	fi
