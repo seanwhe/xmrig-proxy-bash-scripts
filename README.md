@@ -34,11 +34,10 @@ Some knowledge of:
    `./install.sh`
 1. When prompted: "Enter your own settings?" enter 'y'es.
 1. Enter values for your:
+   1. Algorithm to use
    1. Pool server URL
-   1. Pool server TCP port
    1. Receive wallet address
-   1. Email address
-   1. Miner identifier name
+   1. Pool password 
 1. After install is complete. Attach to the screen session created during the installation.
    `screen -r`
 
