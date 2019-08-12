@@ -123,6 +123,36 @@ _USER_CRONSTART="@reboot"
 # Set the name of the screen created by start script
 _XMRIG_SCREEN="xmrig-proxy"
 
+# Set swap file name
+_SWAPFILE_NAME="swapfile"
+
+# Set swapfile size
+_SWAPFILE_SIZE="4G"
+
+# Set swappiness
+_SWAPPINESS="$(sysctl vm.swappiness | cut -d' ' -f 3)"
+_SWAPPINESS_TARGET="10"
+
+# Set vfs cache pressure
+_VFS_CACHE_PRESSURE="$(sysctl vm.vfs_cache_pressure  | cut -d' ' -f 3)"
+_VFS_CACHE_PRESSURE_TARGET="50"
+
+# Set file-max
+_FILE_MAX="$(cat /proc/sys/fs/file-max)"
+_FILE_MAX_TARGET="800000"
+
+# Set ulimit
+_ULIMIT="$(ulimit -n)"
+_ULIMIT_TARGET="1048576"
+
+# Set ulimit hard for user
+_ULIMIT_HARD="$(ulimit -Hn)"
+_ULIMIT_HARD_TARGET="$_ULIMIT_TARGET"
+
+# Set ulimit soft for user
+_ULIMIT_SOFT=$(ulimit -Sn)
+_ULIMIT_SOFT_TARGET="$_ULIMIT_TARGET"
+
 # Run apt maintenance
 # 1 = yes 0 = no
 _APT_MAINETANCE="1"
