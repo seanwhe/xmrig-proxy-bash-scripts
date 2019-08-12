@@ -38,15 +38,39 @@ Some knowledge of:
    1. Pool server URL
    1. Receive wallet address
    1. Pool password
+   1. HTTP Access Port
    1. HTTP Access Token 
 1. After install is complete. Attach to the screen session created during the installation.
    `screen -r`
 
+### Operation
 
+Defaults - The settings.sh contains a number of variables. With the exception of the 'xmrig-proxy' binary, which is installed to `/usr/bin/xmrig-proxy`, all files remain in the cloned project directory `~/xmrig-proxy-bash-scripts`. Any files generated while running the scripts are also created in this directory. 
 
+During install the folder source for [xmrig proxy](https://github.com/xmrig/xmrig-proxy) is cloned to `~/xmrig-proxy-bash-scripts/xmrig-proxy/`. The file `config.json`, used to configure xmrig-proxy, is also created in this path and is passed to xmrig-proxy at startup. 
 
+During installation it is recomended to enter your own settings. This creates a file named 'mysettings.sh' which will not be overwritten during future installs or upgrades. Values for variables found in 'mysettings.sh' are used to create 'config.json'.
 
+This should work out the box, if you follow the installation steps and enter your own values for 'mysettings.sh.
 
+Once you have a running xmrig then you can start playing around and tweaking to suite requirements.
+
+What follows is a brief of the shell scripts you will find. The names are mostly self explanatory.
+Comments and notes are used liberally in the scripts to help give you hints as to how it works.
+The scripts are designed to be modular to promote resuse, execute exclusion and standalone execution.
+
+* build.sh - clones xmrig-proxy to ``~/xmrig-proxy-bash-scripts`/xmrig-proxy`, configures, builds and copies xmrig-proxy to `/usr/bin/`
+* config.sh - contains variables that aid in defining the values for the attributes found in config.json.
+* crontab.sh - installs a cron to start xmrig-proxy @reboot (Can be commented out of install if desired).
+* depends.sh - installs dependancies required by xmrig-proxy and these scripts.
+* functions.sh - a collection of functions used in various of the scripts.
+* input.sh - prompts to enter values for creating 'mysettings.sh'
+* install.sh - the main entry point when first installing.
+* maintenance.sh - performs apt update, upgrade, autoremove and autoclean operations.
+* settings.sh - contains variables used by these scripts.
+* start.sh - starts xmrig in a screen session.
+* stop.sh - stops xmrig screen session.
+* update.sh - pulls updates and runs installation
 
 ### Viewing the log
 Default of the start script is to create a screen session named 'xmrig-proxy'.
