@@ -29,7 +29,7 @@ _HTTP_ENABLED="true"
 _HTTP_HOST="$(hostname --all-ip-addresses | awk '{print $1}')"
 _HTTP_PORT="8080"
 _HTTP_ACCESS_TOKEN="null"
-_HTTP_RESTRICTED="false"
+_HTTP_RESTRICTED="true"
 
 _BACKGROUND="false"
 
