@@ -2,7 +2,7 @@
 
 echo "${_GREEN}MAINTENANCE STARTED${_RESET}"
 
-if [ "$_APT_MAINTENANCE" = "1" ]; then
+if [ "$_APT_MAINTENANCE" -eq "1" ]; then
 
 	sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean
 
