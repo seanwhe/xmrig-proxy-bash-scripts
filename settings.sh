@@ -157,7 +157,7 @@ _ULIMIT_SOFT_TARGET="$_ULIMIT_TARGET"
 
 # Run apt maintenance
 # 1 = yes 0 = no
-_APT_MAINETANCE="1"
+_APT_MAINTENANCE="1"
 
 # Run install of depends
 # 1 = yes 0 = no
